@@ -8,18 +8,27 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Ajuste para que el contenedor de noticias sea más grande al quitar los banners laterales */
         .page-layout {
-            display: block; /* Cambiamos flex por block para ocupar todo el ancho */
-            max-width: 1200px; /* Ancho máximo para que no se estire demasiado en monitores gigantes */
+            display: flex;
+            justify-content: center; /* Centra el contenido horizontalmente */
+            width: 100%;
+            max-width: 1400px; /* Ancho más grande para el contenedor principal */
             margin: 20px auto;
+            padding: 0 20px;
+            box-sizing: border-box;
         }
         .content-center {
-            max-width: 100% !important; /* El contenedor ahora usa todo el espacio */
+            flex: 1;
             width: 100%;
+            max-width: 1200px; /* Ancho máximo de la zona de noticias */
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
         }
         .grid-noticias-premium {
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Rejilla más flexible y amplia */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Columnas más anchas */
+            gap: 25px;
         }
     </style>
 </head>
@@ -57,7 +66,7 @@
                         <div class="noti-info">
                             <span class="tag">Tendencia</span>
                             <h3>Guía de Quadrobics 2026: Cómo evitar lesiones en las muñecas</h3>
-                            <p>La seguridad es lo primero al practicar quadrobics. En esta recopilación de tendencias de TikTok, analizamos los mejores consejos de expertos en movimiento animal para fortalecer las articulaciones y realizar saltos de forma atlética y segura sin comprometer tu salud física.</p>
+                            <p>La seguridad es lo primero al practicar quadrobics. Analizamos los mejores consejos de expertos en movimiento animal para fortalecer las articulaciones.</p>
                         </div>
                     </a>
                 </article>
@@ -67,8 +76,8 @@
                         <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=600" alt="Máscara">
                         <div class="noti-info">
                             <span class="tag">DIY</span>
-                            <h3>Top 5 materiales para máquinas realistas</h3>
-                            <p>Explora los tutoriales más virales de YouTube para crear gear personalizado. Desde el uso de fieltro de alta densidad hasta técnicas de pintura acrílica para lograr un pelaje realista en tus máscaras de gato o zorro.</p>
+                            <h3>Top 5 materiales para máscaras realistas</h3>
+                            <p>Explora los tutoriales más virales para crear gear personalizado con técnicas de pintura acrílica y fieltro.</p>
                         </div>
                     </a>
                 </article>
@@ -79,7 +88,7 @@
                         <div class="noti-info">
                             <span class="tag">Comunidad</span>
                             <h3>Debates en Reddit: El despertar espiritual en 2026</h3>
-                            <p>Accede a los hilos de discusión más importantes de la comunidad global. Este año, los debates se centran en las experiencias de despertar (awakening) y el apoyo mutuo entre nuevos miembros de la comunidad.</p>
+                            <p>Accede a los hilos de discusión más importantes sobre experiencias de despertar y apoyo mutuo.</p>
                         </div>
                     </a>
                 </article>
@@ -89,7 +98,7 @@
                         <img src="https://images.unsplash.com/photo-1470093851219-69951fcbb533?auto=format&fit=crop&w=400" alt="Zorro">
                         <div class="noti-info">
                             <h3>Therian vs Otherkin: ¿Cuál es la diferencia real?</h3>
-                            <p>Un análisis profundo sobre las raíces de estas identidades para entender si tu conexión es estrictamente animal o abarca seres mitológicos.</p>
+                            <p>Análisis sobre las raíces de estas identidades para entender tu conexión animal o mitológica.</p>
                         </div>
                     </a>
                 </article>
@@ -99,7 +108,7 @@
                         <img src="https://images.unsplash.com/photo-1510797215324-95aa89f43c33?auto=format&fit=crop&w=400" alt="Guantes">
                         <div class="noti-info">
                             <h3>Análisis: Los mejores guantes para protección</h3>
-                            <p>Si practicas en exteriores, proteger tus manos es vital. Comparamos los materiales con mejor agarre para superficies como césped o tierra.</p>
+                            <p>Comparamos los materiales con mejor agarre para proteger tus manos en exteriores.</p>
                         </div>
                     </a>
                 </article>
@@ -109,18 +118,18 @@
                         <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600" alt="Montaña">
                         <div class="noti-info">
                             <span class="tag">Eventos</span>
-                            <h3>Concentraciones Therian 2026: Calendario de Meetups Internacionales</h3>
-                            <p>Descubre dónde se celebrarán los próximos encuentros presenciales este año para conectar con otros miembros de la cultura en entornos naturales.</p>
+                            <h3>Concentraciones Therian 2026: Calendario de Meetups</h3>
+                            <p>Descubre dónde se celebrarán los próximos encuentros presenciales este año.</p>
                         </div>
                     </a>
                 </article>
 
                 <article class="noti-mini">
                     <a href="https://www.youtube.com/results?search_query=therian+documentary" target="_blank" rel="noopener noreferrer">
-                        <img src="https://images.unsplash.com/photo-1490131784822-b56a45664a9a?auto=format&fit=crop&w=400" alt="Lobo">
+                        <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=400" alt="Documental">
                         <div class="noti-info">
-                            <h3>Documentales recomendados para entender la identidad</h3>
-                            <p>Selección de contenidos audiovisuales que exploran la psicología y las vivencias personales de therians de todo el mundo.</p>
+                            <h3>Documentales recomendados: Historias Reales</h3>
+                            <p>Contenidos audiovisuales que exploran la psicología y vivencias de therians en el mundo.</p>
                         </div>
                     </a>
                 </article>
@@ -130,17 +139,17 @@
                         <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=400" alt="Arte">
                         <div class="noti-info">
                             <h3>El auge del Therian Art en redes sociales</h3>
-                            <p>El arte es una de las mayores formas de expresión de la comunidad. Mira cómo los artistas plasman sus theriotipos en ilustraciones increíbles.</p>
+                            <p>Mira cómo los artistas plasman sus theriotipos en ilustraciones increíbles.</p>
                         </div>
                     </a>
                 </article>
 
                 <article class="noti-mini">
                     <a href="https://www.google.com/search?q=psychology+of+therianthropy+studies" target="_blank" rel="noopener noreferrer">
-                        <img src="https://images.unsplash.com/photo-1507034589631-9433c6bc455e?auto=format&fit=crop&w=400" alt="Estudio">
+                        <img src="https://images.unsplash.com/photo-1576089172739-02646c041d58?auto=format&fit=crop&w=400" alt="Estudio Psicología">
                         <div class="noti-info">
-                            <h3>Psicología y Therianthropía: Últimos estudios publicados</h3>
-                            <p>Mantente informado sobre las investigaciones actuales que analizan la identidad no humana desde una perspectiva científica y psicológica.</p>
+                            <h3>Psicología y Therianthropía: Estudios 2026</h3>
+                            <p>Mantente informado sobre investigaciones que analizan la identidad desde una perspectiva científica.</p>
                         </div>
                     </a>
                 </article>
@@ -150,7 +159,7 @@
                         <img src="https://images.unsplash.com/photo-1557008075-7f2c5efa4cfd?auto=format&fit=crop&w=400" alt="Gato">
                         <div class="noti-info">
                             <h3>Dónde comprar Gear y Colas de origen ético</h3>
-                            <p>La ética es fundamental en nuestra comunidad. Encuentra proveedores que utilizan materiales sintéticos o de origen responsable para colas y accesorios.</p>
+                            <p>Encuentra proveedores que utilizan materiales responsables para tus accesorios.</p>
                         </div>
                     </a>
                 </article>
