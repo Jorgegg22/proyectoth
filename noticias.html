@@ -10,25 +10,45 @@
     <style>
         .page-layout {
             display: flex;
-            justify-content: center; /* Centra el contenido horizontalmente */
+            justify-content: center;
             width: 100%;
-            max-width: 1400px; /* Ancho más grande para el contenedor principal */
-            margin: 20px auto;
-            padding: 0 20px;
+            max-width: 100%;
+            margin: 20px 0;
+            padding: 0;
             box-sizing: border-box;
         }
         .content-center {
-            flex: 1;
-            width: 100%;
-            max-width: 1200px; /* Ancho máximo de la zona de noticias */
+            width: 95%;
+            max-width: 1300px;
             background: #fff;
-            padding: 30px;
+            padding: 40px;
             border-radius: 15px;
+            margin: 0 auto;
         }
         .grid-noticias-premium {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Columnas más anchas */
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        .noti-principal, .noti-secundaria, .noti-mini {
+            border: 1px solid #eee;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            background: #fff;
+        }
+        .noti-principal:hover, .noti-secundaria:hover, .noti-mini:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .noti-info {
+            padding: 20px;
+        }
+        img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
         }
     </style>
 </head>
@@ -61,7 +81,7 @@
             <div class="grid-noticias-premium">
                 
                 <article class="noti-principal">
-                    <a href="https://www.tiktok.com/tag/quadrobics" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.tiktok.com/tag/quadrobics" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
                         <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=800" alt="Quadrobics">
                         <div class="noti-info">
                             <span class="tag">Tendencia</span>
@@ -72,18 +92,18 @@
                 </article>
 
                 <article class="noti-secundaria">
-                    <a href="https://www.youtube.com/results?search_query=therian+mask+tutorial+diy" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.youtube.com/results?search_query=therian+mask+tutorial+diy" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
                         <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=600" alt="Máscara">
                         <div class="noti-info">
                             <span class="tag">DIY</span>
-                            <h3>Top 5 materiales para máscaras realistas</h3>
+                            <h3>Top 5 materiales para máquinas realistas</h3>
                             <p>Explora los tutoriales más virales para crear gear personalizado con técnicas de pintura acrílica y fieltro.</p>
                         </div>
                     </a>
                 </article>
 
                 <article class="noti-secundaria">
-                    <a href="https://www.reddit.com/r/therianthropy/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.reddit.com/r/therianthropy/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
                         <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600" alt="Naturaleza">
                         <div class="noti-info">
                             <span class="tag">Comunidad</span>
@@ -94,7 +114,7 @@
                 </article>
 
                 <article class="noti-mini">
-                    <a href="https://www.google.com/search?q=otherkin+vs+therian+differences" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.google.com/search?q=otherkin+vs+therian+differences" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
                         <img src="https://images.unsplash.com/photo-1470093851219-69951fcbb533?auto=format&fit=crop&w=400" alt="Zorro">
                         <div class="noti-info">
                             <h3>Therian vs Otherkin: ¿Cuál es la diferencia real?</h3>
@@ -104,7 +124,7 @@
                 </article>
 
                 <article class="noti-mini">
-                    <a href="https://www.google.com/search?q=best+gloves+for+quadrobics" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.google.com/search?q=best+gloves+for+quadrobics" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
                         <img src="https://images.unsplash.com/photo-1510797215324-95aa89f43c33?auto=format&fit=crop&w=400" alt="Guantes">
                         <div class="noti-info">
                             <h3>Análisis: Los mejores guantes para protección</h3>
@@ -114,7 +134,7 @@
                 </article>
 
                 <article class="noti-secundaria">
-                    <a href="https://www.google.com/search?q=therian+meetups+and+gatherings+2026" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.google.com/search?q=therian+meetups+and+gatherings+2026" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
                         <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600" alt="Montaña">
                         <div class="noti-info">
                             <span class="tag">Eventos</span>
@@ -125,8 +145,8 @@
                 </article>
 
                 <article class="noti-mini">
-                    <a href="https://www.youtube.com/results?search_query=therian+documentary" target="_blank" rel="noopener noreferrer">
-                        <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=400" alt="Documental">
+                    <a href="https://www.youtube.com/results?search_query=therian+documentary" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+                        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=400" alt="Cine y Documentales">
                         <div class="noti-info">
                             <h3>Documentales recomendados: Historias Reales</h3>
                             <p>Contenidos audiovisuales que exploran la psicología y vivencias de therians en el mundo.</p>
@@ -135,7 +155,7 @@
                 </article>
 
                 <article class="noti-mini">
-                    <a href="https://www.tiktok.com/tag/therianart" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.tiktok.com/tag/therianart" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
                         <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=400" alt="Arte">
                         <div class="noti-info">
                             <h3>El auge del Therian Art en redes sociales</h3>
@@ -145,8 +165,8 @@
                 </article>
 
                 <article class="noti-mini">
-                    <a href="https://www.google.com/search?q=psychology+of+therianthropy+studies" target="_blank" rel="noopener noreferrer">
-                        <img src="https://images.unsplash.com/photo-1576089172739-02646c041d58?auto=format&fit=crop&w=400" alt="Estudio Psicología">
+                    <a href="https://www.google.com/search?q=psychology+of+therianthropy+studies" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+                        <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&w=400" alt="Estudio e Investigación">
                         <div class="noti-info">
                             <h3>Psicología y Therianthropía: Estudios 2026</h3>
                             <p>Mantente informado sobre investigaciones que analizan la identidad desde una perspectiva científica.</p>
@@ -155,7 +175,7 @@
                 </article>
 
                 <article class="noti-mini">
-                    <a href="https://www.google.com/search?q=ethical+therian+tails+and+gear" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.google.com/search?q=ethical+therian+tails+and+gear" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
                         <img src="https://images.unsplash.com/photo-1557008075-7f2c5efa4cfd?auto=format&fit=crop&w=400" alt="Gato">
                         <div class="noti-info">
                             <h3>Dónde comprar Gear y Colas de origen ético</h3>
